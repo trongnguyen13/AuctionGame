@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="auction">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Auction Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="plugin/bootstrap-3.2.0/css/bootstrap.css">
+</head>
+<body>
+    <div id="wrapper" style="margin-top:20px">
+		<div ng-view>
+		</div>
+	</div>
+    <script type="text/javascript" src="libs/jquery-2.1.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="libs/jquery.blockui.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="libs/angular.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="libs/angular-resource.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="libs/angular-route.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="libs/angular-touch.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="libs/underscore-min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="libs/underscore.string.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="libs/underscore.string.format.js" charset="utf-8"></script>
+	<script type="text/javascript" src="libs/ui-bootstrap-0.12.1.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="plugin/bootstrap-3.2.0/js/bootstrap.min.js" charset="utf-8" ></script>
+	<script type="text/javascript" src="libs/socket.io.js" charset="utf-8"></script>
+    <script type="text/javascript" src="scripts/app.js" charset="utf-8"></script>
+	
+	<script type="text/javascript" src="scripts/controllers/loginController.js" charset="utf-8"></script>
+	<script type="text/javascript" src="scripts/controllers/dashboardController.js" charset="utf-8"></script>
+	
+	<script type="text/javascript" src="scripts/services/dialogService.js" charset="utf-8"></script>
+	<script type="text/javascript" src="scripts/services/commonService.js" charset="utf-8"></script>
+	<script type="text/javascript" src="scripts/services/auctionapiService.js" charset="utf-8"></script>
+	
+	<script type="text/javascript" src="scripts/factories/blockUIFactory.js" charset="utf-8"></script>
+	<script type="text/javascript" src="scripts/factories/socketFactory.js" charset="utf-8"></script>
+	
+    <script type="text/javascript" src="scripts/directives/playerStats.js" charset="utf-8"></script>
+    <script type="text/javascript" src="scripts/directives/inventory.js" charset="utf-8"></script>
+    <script type="text/javascript" src="scripts/directives/currentAuction.js" charset="utf-8"></script>
+    <script type="text/javascript" src="scripts/dialogs/startAuction.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<div>
+ <div class="panel panel-primary">
+		<div class="panel-heading">
+		 <span>Current Auction</span>
+		</div>
+		 <div class="panel-body">
+<div  ng-show="!!auction">
+		<div class="form-group">
+			<label>Seller:<span>{{auction.seller}}</span></label>
+		</div >
+		<div class="form-group col-md-12">
+			<div class="col-md-6 center">
+				<figure>
+				  <img ng-src="{{auction.item.name && 'images/' + auction.item.name +'.png' || ''}}" width="60" height="60">
+				  <figcaption>{{auction.item.name}}</figcaption>
+				</figure>
+			</div>
+			<div class="col-md-6 center vertical">
+				<label>Quantity</label>
+				<h4>{{auction.quantity}}</h4>
+			</div>
+		</div >
+		<div class="form-group" style="clear: both;">
+			<label>Time left:<span>{{auction.timeleft}}</span><span>seconds</span></label>
+		</div>
+		<div class="form-group" ng-show="auction.bidder">
+			<label>Bidder:<span>{{auction.bidder}}</span></label>
+		</div>
+		<div class="form-group">
+			<label>{{auction.winningbid==0 ? 'Minimum bid' : 'Winning bid'}}:<span>{{auction.winningbid == 0 ? auction.minimum : auction.winningbid}}</span></label>
+		</div>
+		<div class="form-group center">
+			<label>Your bid:</label><input type="number" ng-model="amount"/>
+		</div>
+		<div class="form-group center">
+			<button class="btn btn-primary" ng-click="onBid()">Place Bid</button>
+		</div>
+	</div>
+	<div ng-show="!auction">
+		<div class="form-group">
+			<label>No auction at the moment.</label>
+		</div >
+	</div>
+		 </div>
+	</div>
+</div>
